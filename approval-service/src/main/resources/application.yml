@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: approval-service
+  config:
+    import: optional:configserver:http://localhost:8888
+
+# Port (8084), datasource, JPA, Eureka, Feign timeouts, Swagger, Actuator
+# settings are all centrally defined in
+# config-server/src/main/resources/config-repo/approval-service.yml
+# and config-repo/application.yml (shared defaults)

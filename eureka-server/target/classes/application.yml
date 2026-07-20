@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: eureka-server
+  config:
+    import: optional:configserver:http://localhost:8888
+
+# Everything else (port 8761, register-with-eureka=false, fetch-registry=false,
+# self-preservation disabled) is centrally defined in
+# config-server/src/main/resources/config-repo/eureka-server.yml

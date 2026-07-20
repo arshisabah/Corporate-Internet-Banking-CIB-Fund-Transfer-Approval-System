@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: beneficiary-service
+  config:
+    import: optional:configserver:http://localhost:8888
+
+# Port (8082), datasource, JPA, Eureka, Swagger, Actuator settings are all
+# centrally defined in config-server/src/main/resources/config-repo/beneficiary-service.yml
+# and config-repo/application.yml (shared defaults)

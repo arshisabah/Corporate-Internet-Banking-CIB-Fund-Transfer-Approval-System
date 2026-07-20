@@ -1,0 +1,3 @@
+com\cib\gateway\config\GatewayErrorHandler.class
+com\cib\gateway\filter\CorrelationIdGlobalFilter.class
+com\cib\gateway\ApiGatewayApplication.class

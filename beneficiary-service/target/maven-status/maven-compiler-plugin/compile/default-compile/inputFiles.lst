@@ -1,0 +1,13 @@
+C:\Users\arshi.sabah\Downloads\cib-fund-transfer-system-complete\beneficiary-service\src\main\java\com\cib\beneficiary\BeneficiaryServiceApplication.java
+C:\Users\arshi.sabah\Downloads\cib-fund-transfer-system-complete\beneficiary-service\src\main\java\com\cib\beneficiary\service\BeneficiaryService.java
+C:\Users\arshi.sabah\Downloads\cib-fund-transfer-system-complete\beneficiary-service\src\main\java\com\cib\beneficiary\repository\BeneficiaryRepository.java
+C:\Users\arshi.sabah\Downloads\cib-fund-transfer-system-complete\beneficiary-service\src\main\java\com\cib\beneficiary\dto\request\BeneficiaryCreateRequest.java
+C:\Users\arshi.sabah\Downloads\cib-fund-transfer-system-complete\beneficiary-service\src\main\java\com\cib\beneficiary\enums\BeneficiaryStatus.java
+C:\Users\arshi.sabah\Downloads\cib-fund-transfer-system-complete\beneficiary-service\src\main\java\com\cib\beneficiary\config\OpenApiConfig.java
+C:\Users\arshi.sabah\Downloads\cib-fund-transfer-system-complete\beneficiary-service\src\main\java\com\cib\beneficiary\dto\request\BeneficiaryUpdateRequest.java
+C:\Users\arshi.sabah\Downloads\cib-fund-transfer-system-complete\beneficiary-service\src\main\java\com\cib\beneficiary\dto\response\BeneficiaryResponse.java
+C:\Users\arshi.sabah\Downloads\cib-fund-transfer-system-complete\beneficiary-service\src\main\java\com\cib\beneficiary\service\impl\BeneficiaryServiceImpl.java
+C:\Users\arshi.sabah\Downloads\cib-fund-transfer-system-complete\beneficiary-service\src\main\java\com\cib\beneficiary\dto\response\BeneficiaryValidationResponse.java
+C:\Users\arshi.sabah\Downloads\cib-fund-transfer-system-complete\beneficiary-service\src\main\java\com\cib\beneficiary\controller\BeneficiaryController.java
+C:\Users\arshi.sabah\Downloads\cib-fund-transfer-system-complete\beneficiary-service\src\main\java\com\cib\beneficiary\entity\Beneficiary.java
+C:\Users\arshi.sabah\Downloads\cib-fund-transfer-system-complete\beneficiary-service\src\main\java\com\cib\beneficiary\mapper\BeneficiaryMapper.java

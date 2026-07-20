@@ -1,0 +1,33 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config-repo
+        # To switch to a real Git-backed repo in production, replace the
+        # 'native' block above with:
+        # git:
+        #   uri: https://github.com/your-org/cib-config-repo
+        #   default-label: main
+        #   clone-on-start: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,refresh
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    org.springframework.cloud.config: INFO
+    com.cib: DEBUG

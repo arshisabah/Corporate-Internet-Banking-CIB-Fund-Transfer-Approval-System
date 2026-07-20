@@ -1,0 +1,27 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: approval-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/approval_service_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+feign:
+  client:
+    config:
+      fund-transfer-service:
+        connectTimeout: 3000
+        readTimeout: 5000
+
+info:
+  app:
+    name: Approval Service
+    description: Handles Approve/Reject/Send-Back actions, approval history and audit trail

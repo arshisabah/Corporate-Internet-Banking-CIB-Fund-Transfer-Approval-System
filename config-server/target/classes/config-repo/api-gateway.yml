@@ -1,0 +1,44 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+      routes:
+        - id: customer-service
+          uri: lb://customer-service
+          predicates:
+            - Path=/api/v1/customers/**,/api/v1/corporate-users/**
+        - id: beneficiary-service
+          uri: lb://beneficiary-service
+          predicates:
+            - Path=/api/v1/beneficiaries/**
+        - id: fund-transfer-service
+          uri: lb://fund-transfer-service
+          predicates:
+            - Path=/api/v1/transfers/**
+        - id: approval-service
+          uri: lb://approval-service
+          predicates:
+            - Path=/api/v1/approvals/**
+      httpclient:
+        connect-timeout: 5000
+        response-timeout: 10s
+      default-filters:
+        - AddResponseHeader=X-Gateway, CIB-API-Gateway
+        - name: Retry
+          args:
+            retries: 2
+            methods: GET
+            statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,gateway

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: api-gateway
+  config:
+    import: optional:configserver:http://localhost:8888
+
+# Port (8080), routes to all 4 business services, retry filters, and
+# Actuator gateway endpoint exposure are all centrally defined in
+# config-server/src/main/resources/config-repo/api-gateway.yml

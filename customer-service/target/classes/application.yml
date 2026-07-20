@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: customer-service
+  config:
+    import: optional:configserver:http://localhost:8888
+
+# Port (8081), datasource, JPA, Eureka, Swagger, Actuator settings are all
+# centrally defined in config-server/src/main/resources/config-repo/customer-service.yml
+# and config-repo/application.yml (shared defaults)

@@ -1,0 +1,32 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: fund-transfer-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/fund_transfer_service_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# Feign clients call beneficiary-service and approval-service by their
+# Eureka application name (service discovery), not hardcoded hosts.
+feign:
+  client:
+    config:
+      beneficiary-service:
+        connectTimeout: 3000
+        readTimeout: 5000
+      approval-service:
+        connectTimeout: 3000
+        readTimeout: 5000
+
+info:
+  app:
+    name: Fund Transfer Service
+    description: Initiates transfers, validates beneficiaries, submits to approval, tracks status/history
